@@ -27,7 +27,7 @@ public class TrainService {
         //Save the train and return the trainId that is generated from the database.
         //Avoid using the lombok library
         Train train = new Train();
-        //make a string route
+
         String route = "";
         List<Station> stations = trainEntryDto.getStationRoute();
         for(int i=0;i<stations.size();i++){
