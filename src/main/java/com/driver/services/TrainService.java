@@ -71,6 +71,7 @@ public class TrainService {
         boolean isDestination = false;
 
         for(String station:stations){
+
             if(String.valueOf(source).equals(station)){
                 isSource = true;
             }
@@ -91,6 +92,9 @@ public class TrainService {
             if(isDestination){
                 break;
             }
+        }
+        if(!isSource || !isDestination){
+            return 0;
         }
        return total;
     }
