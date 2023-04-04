@@ -7,7 +7,6 @@ public class SeatAvailabilityEntryDto {
 
     private int trainId;
 
-
     private Station fromStation;
 
     private Station toStation;
