@@ -77,14 +77,14 @@ public class TicketService {
             i++;
         }
 
-        if(start == -1 || end == -1){
+        if(start == -1 || end == -1 || (start - end > 0)){
             throw new Exception("Invalid stations");
         }
 
         ticket.setFromStation(bookTicketEntryDto.getFromStation());
         ticket.setToStation(bookTicketEntryDto.getToStation());
 
-        ticket.setTotalFare((end-start)*300);
+        ticket.setTotalFare(bookTicketEntryDto.getNoOfSeats()*(end-start)*300);
 
         System.out.println((end-start)*300);
 
